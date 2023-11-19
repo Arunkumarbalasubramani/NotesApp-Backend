@@ -11,7 +11,7 @@ connection();
 app.use(express.json());
 app.use(cors());
 app.use("/users", userRouter);
-app.use("/user/notes", noteRouter);
+app.use("/notes", noteRouter);
 app.get("/", (req, res) => {
   res.send("Welcome to NotoSphere");
 });

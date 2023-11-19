@@ -55,8 +55,8 @@ userRouter.post("/signin", async (req, res) => {
       } else {
         const token = jwt.sign(
           { id: isUserFromDB._id },
-          process.env.ACCESS_TOKEN_SECRET,
-          { expiresIn: "3m" }
+          process.env.ACCESS_TOKEN_SECRET
+          // { expiresIn: "3m" }
         );
 
         res
